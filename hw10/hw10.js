@@ -50,7 +50,7 @@ const getDiscountedPrice = (price, discountPercentage, callback) => {
   return callback(price, discountPercentage);
 };
 
-let price = 1000;
+let price = 1200;
 let discountPercentage = 20;
 
 const discountedPrice = getDiscountedPrice(

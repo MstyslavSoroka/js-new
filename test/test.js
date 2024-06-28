@@ -66,3 +66,38 @@
 // };
 // console.log(hello2());
 
+
+
+// const hotel = {
+    
+//     name: "coolhotel",
+//     stars: 5,
+//     price: 100,
+
+// }
+
+// console.log(hotel.stars)
+// hotel.stars = 2;
+// console.log(hotel.stars)
+
+
+const myArray = {
+
+    increaseAge(numberToIncrease)  {
+
+        return (myArray.age + numberToIncrease)
+        
+    }
+
+    
+};
+
+myArray.name = "Mstyslav";
+myArray.age = 13;
+myArray.city = "Aberdeen";
+myArray.occupation = "Student";
+
+
+
+
+console.log(myArray);
