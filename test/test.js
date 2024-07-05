@@ -66,10 +66,8 @@
 // };
 // console.log(hello2());
 
-
-
 // const hotel = {
-    
+
 //     name: "coolhotel",
 //     stars: 5,
 //     price: 100,
@@ -80,24 +78,149 @@
 // hotel.stars = 2;
 // console.log(hotel.stars)
 
+// const myArray = {
 
-const myArray = {
+//     increaseAge(numberToIncrease)  {
 
-    increaseAge(numberToIncrease)  {
+//         return (myArray.age + numberToIncrease)
 
-        return (myArray.age + numberToIncrease)
-        
+//     }
+
+// };
+
+// myArray.name = "Mstyslav";
+// myArray.age = 13;
+// myArray.city = "Aberdeen";
+// myArray.occupation = "Student";
+
+// console.log(myArray);
+
+// const human = {
+//   name: "mstyslav",
+//   age: 14,
+//   gender: "male",
+
+//   display() {
+//     console.log(`${this.name}  ${this.age}  ${this.gender}`);
+//   },
+// };
+
+// human.display();
+
+// const book = {
+//   title: "Harry Potter",
+//   author: "Jk Rowling",
+//   year: 123,
+//   genre: "fantasy",
+
+//   newBook: function (newTitle, newAuthor, newYear, newGenre) {
+//     newTitle = this.title = newTitle;
+//     newAuthor = this.author = newAuthor;
+//     newYear = this.year = newYear;
+//     newGenre = this.genre = newGenre;
+//   },
+// };
+
+// book.newBook("new title", "new author", 2222, "new genre");
+
+// console.log(book);
+
+
+
+const products = [
+  pc = {
+     name: "PC",
+     price: 1000,
+     category: "Electronics",
+     stock: 5 
+      },
+  phone = { 
+    name: "Phone",
+    price: 500,
+    category: "Electronics", 
+    stock: 10 
+    },
+  skirt = {
+    name: "Shirt",
+    price: 50,
+    category: "Clothing", 
+    stock: 20 
+    },
+  jeans = {
+    name: "Jeans", 
+    price: 80,
+    category: "Clothing", 
+    stock: 15 
+    },
+  milk = { 
+    name: "Milk", 
+    price: 2,
+    category: "food",
+    stock: 100
+     },
+  bread = { 
+    name: "Bread",
+    price: 2,
+    category: "food",
+    stock: 50 
+      }
+];
+
+
+function getTotalStockValueByCategory(products, category) {
+let totalValue = 0;
+
+for (let i in products) {
+    let product = products[i];
+    if (product.category === category) {
+        totalValue += product.price * product.stock;
     }
+}
 
-    
+return totalValue;
+}
+
+
+const electronicsValue = getTotalStockValueByCategory(products, "Electronics");
+console.log(`Загальна вартість товарів в категорії Electronics: $${electronicsValue}`);
+
+const clothingValue = getTotalStockValueByCategory(products, "Clothing");
+console.log(`Загальна вартість товарів в категорії Clothing: $${clothingValue}`);
+
+const foodValue = getTotalStockValueByCategory(products, "food");
+console.log(`Загальна вартість товарів в категорії food: $${foodValue}`);
+
+// ===========================================================================================
+
+
+const person = {
+  firstName: "Mstyslav",
+  lastName: "Soroka",
+
+  get fullName() {
+      return `${this.firstName} ${this.lastName}`;
+  },
+
+  printFullName() {
+      console.log(`Повне ім'я: ${this.fullName}`);
+  }
 };
 
-myArray.name = "Mstyslav";
-myArray.age = 13;
-myArray.city = "Aberdeen";
-myArray.occupation = "Student";
+person.printFullName(); 
+
+// ===========================================================================================
 
 
+const product = {
+  name: "Laptop",
+  price: 1000,
+  quantity: 5,
+
+  TotalValue() {
+      const totalValue = this.price * this.quantity;
+      console.log(`Вартість всіх (${this.name}): $${totalValue}`);
+  }
+};
 
 
-console.log(myArray);
+product.TotalValue(); 
