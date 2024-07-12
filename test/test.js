@@ -125,102 +125,189 @@
 
 // console.log(book);
 
+// const products = [
+//   pc = {
+//      name: "PC",
+//      price: 1000,
+//      category: "Electronics",
+//      stock: 5
+//       },
+//   phone = {
+//     name: "Phone",
+//     price: 500,
+//     category: "Electronics",
+//     stock: 10
+//     },
+//   skirt = {
+//     name: "Shirt",
+//     price: 50,
+//     category: "Clothing",
+//     stock: 20
+//     },
+//   jeans = {
+//     name: "Jeans",
+//     price: 80,
+//     category: "Clothing",
+//     stock: 15
+//     },
+//   milk = {
+//     name: "Milk",
+//     price: 2,
+//     category: "food",
+//     stock: 100
+//      },
+//   bread = {
+//     name: "Bread",
+//     price: 2,
+//     category: "food",
+//     stock: 50
+//       }
+// ];
 
+// function getTotalStockValueByCategory(products, category) {
+// let totalValue = 0;
 
-const products = [
-  pc = {
-     name: "PC",
-     price: 1000,
-     category: "Electronics",
-     stock: 5 
-      },
-  phone = { 
-    name: "Phone",
-    price: 500,
-    category: "Electronics", 
-    stock: 10 
-    },
-  skirt = {
-    name: "Shirt",
-    price: 50,
-    category: "Clothing", 
-    stock: 20 
-    },
-  jeans = {
-    name: "Jeans", 
-    price: 80,
-    category: "Clothing", 
-    stock: 15 
-    },
-  milk = { 
-    name: "Milk", 
-    price: 2,
-    category: "food",
-    stock: 100
-     },
-  bread = { 
-    name: "Bread",
-    price: 2,
-    category: "food",
-    stock: 50 
-      }
-];
+// for (let i in products) {
+//     let product = products[i];
+//     if (product.category === category) {
+//         totalValue += product.price * product.stock;
+//     }
+// }
 
+// return totalValue;
+// }
 
-function getTotalStockValueByCategory(products, category) {
-let totalValue = 0;
+// const electronicsValue = getTotalStockValueByCategory(products, "Electronics");
+// console.log(`Загальна вартість товарів в категорії Electronics: $${electronicsValue}`);
 
-for (let i in products) {
-    let product = products[i];
-    if (product.category === category) {
-        totalValue += product.price * product.stock;
+// const clothingValue = getTotalStockValueByCategory(products, "Clothing");
+// console.log(`Загальна вартість товарів в категорії Clothing: $${clothingValue}`);
+
+// const foodValue = getTotalStockValueByCategory(products, "food");
+// console.log(`Загальна вартість товарів в категорії food: $${foodValue}`);
+
+// ===========================================================================================
+
+// const person = {
+//   firstName: "Mstyslav",
+//   lastName: "Soroka",
+
+//   get fullName() {
+//       return `${this.firstName} ${this.lastName}`;
+//   },
+
+//   printFullName() {
+//       console.log(`Повне ім'я: ${this.fullName}`);
+//   }
+// };
+
+// person.printFullName();
+
+// ===========================================================================================
+// const car = {
+//     make: 'Toyota',
+//     model: 'Camry',
+//     year: 2020,
+//     features: ['power windows', 'rear camera', 'navigation'],
+//     safety: {
+//     airbags: true,
+//     antilock_brakes: true,
+//     stability_control: true
+//     }
+//   }
+
+// const {make, model, features, year} = car
+
+// console.log(make, model, features, year
+// )
+
+// const movie = {
+// title: 'The Shawshank Redemption',
+// director: {
+// name: 'Frank Darabont',
+// nationality: 'American'
+// },
+// actors: ['Tim Robbins', 'Morgan Freeman'],
+// release_year: 1994,
+// ratings: {
+// imdb: 9.3,
+// rotten_tomatoes: 90
+// }
+// }
+
+// const {title, director, ratings} = movie
+
+// console.log(title, director, ratings)
+
+// const student = {
+//   name: "Bruce",
+//   surname: "Lee",
+//   grades: [4, 5, 3],
+// };
+
+// const { name, surname, grades } = student;
+
+// console.log(grades);
+
+// function getAverageGrade(num) {
+//   let sum = 0;
+//   for (let i = 0; i < num.length; i += 1) {
+//     sum += num[i];
+//   }
+//   return sum / num.length;
+// }
+
+// console.log(`${name} ${surname} average grade =  ${getAverageGrade(grades)}`);
+
+// const items = [
+//     { name: 'Футболка', price: 250, quantity: 2 },
+//     { name: 'Джинси', price: 800, quantity: 1 },
+//     { name: 'Кросівки', price: 1200, quantity: 1 }
+//     ];
+
+// function totalPrice(arr) {
+//     let total = 0
+//     for(i of items) {
+//         const {price, quantity} = i
+//         total += price * quantity
+//     }
+
+//     return total
+// }
+
+// console.log(totalPrice(items))
+
+// const person = {
+//     name: 'John',
+//     emails: ['john@gmail.com', 'john@example.com', 'john123@yahoo.com']
+//     };
+
+//     function firstEmail(object) {
+//     const {emails } = object;
+//     const [firstEmail] = emails;
+//     console.log(firstEmail);
+//     }
+
+//     firstEmail(person);
+
+const data = {
+  users: [
+    { name: "John", age: 25 },
+    { name: "Jane", age: 17 },
+    { name: "Bob", age: 30 },
+    { name: "Alice", age: 20 },
+  ],
+};
+
+function older(object) {
+  const arr = [];
+  const { users } = object;
+  for (i of users) {
+    const { name, age } = i;
+    if (age >= 18) {
+      console.log(age);
     }
+  }
 }
 
-return totalValue;
-}
-
-
-const electronicsValue = getTotalStockValueByCategory(products, "Electronics");
-console.log(`Загальна вартість товарів в категорії Electronics: $${electronicsValue}`);
-
-const clothingValue = getTotalStockValueByCategory(products, "Clothing");
-console.log(`Загальна вартість товарів в категорії Clothing: $${clothingValue}`);
-
-const foodValue = getTotalStockValueByCategory(products, "food");
-console.log(`Загальна вартість товарів в категорії food: $${foodValue}`);
-
-// ===========================================================================================
-
-
-const person = {
-  firstName: "Mstyslav",
-  lastName: "Soroka",
-
-  get fullName() {
-      return `${this.firstName} ${this.lastName}`;
-  },
-
-  printFullName() {
-      console.log(`Повне ім'я: ${this.fullName}`);
-  }
-};
-
-person.printFullName(); 
-
-// ===========================================================================================
-
-
-const product = {
-  name: "Laptop",
-  price: 1000,
-  quantity: 5,
-
-  TotalValue() {
-      const totalValue = this.price * this.quantity;
-      console.log(`Вартість всіх (${this.name}): $${totalValue}`);
-  }
-};
-
-
-product.TotalValue(); 
+console.log(older(data))
