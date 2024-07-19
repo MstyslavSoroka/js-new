@@ -42,3 +42,7 @@ function hw12() {
 function hw13() {
   window.location.href = "hw13/index.html";
 }
+
+function hw14() {
+  window.location.href = "hw14/index.html";
+}

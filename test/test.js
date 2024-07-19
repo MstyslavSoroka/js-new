@@ -290,24 +290,95 @@
 
 //     firstEmail(person);
 
-const data = {
-  users: [
-    { name: "John", age: 25 },
-    { name: "Jane", age: 17 },
-    { name: "Bob", age: 30 },
-    { name: "Alice", age: 20 },
-  ],
-};
+// const data = {
+//   users: [
+//     { name: "John", age: 25 },
+//     { name: "Jane", age: 17 },
+//     { name: "Bob", age: 30 },
+//     { name: "Alice", age: 20 },
+//   ],
+// };
 
-function older(object) {
-  const arr = [];
-  const { users } = object;
-  for (i of users) {
-    const { name, age } = i;
-    if (age >= 18) {
-      console.log(age);
+// function older(object) {
+//   const arr = [];
+//   const { users } = object;
+//   for (i of users) {
+//     const { name, age } = i;
+//     if (age >= 18) {
+//       console.log(age);
+//     }
+//   }
+// }
+
+// console.log(older(data))
+
+// const nums = [1, 2, 3, 4, 5, 6];
+// const newNums = nums.map((num) => num * 2);
+// console.log(newNums);
+
+// const players = [
+//     { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//     { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//     { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//     { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+//   ];
+
+//   const isOnline = players.filter(player => player.online);
+//   console.log('Online', isOnline);
+
+//   const isOffline = players.filter(player => !player.online);
+//   console.log('Offline', isOffline);
+
+// const numbersArr= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function newNums(nums) {
+//   return nums.filter(num => num % 2 === 0);
+// }
+
+// console.log(newNums(numbersArr));
+
+// const peoples = [
+//   { name: 'John', age: 32, occupation: 'programmer' },
+//   { name: 'Jane', age: 26, occupation: 'teacher' },
+//   { name: 'Mike', age: 42, occupation: 'engineer' },
+//   { name: 'Emily', age: 17, occupation: 'designer' }
+//   ];
+
+//   const older = peoples.filter(people => people.age > 18)
+//   peopleNames = older.map(item => item.name);
+//   console.log(peopleNames)
+
+// function connect(array1, array2) {
+//   let combinedArray = []
+//   for (indexOf(combinedArray[i]) === -1) {
+//     combinedArray.push(array1[i])
+//   }
+
+// }
+
+// const array1 = [1, 2, 3, 44, 4, 5, 6, 6, 7];
+// const array2 = [5, 12, 3, 14, 4, 5, 6, 6, 7];
+
+// console.log(connect(array1, array2))
+
+
+
+const array1 = [1, 2, 3, 44, 4, 5, 6, 6, 7];
+const array2 = [5, 12, 3, 14, 4, 5, 6, 6, 7];
+
+function combine(array1, array2) {
+  const combinedArray = array1.concat(array2);
+
+  const newArr = [];
+
+  for (let i = 0; i < combinedArray.length; i++) {
+    if (newArr.indexOf(combinedArray[i]) === -1) {
+      newArr.push(combinedArray[i]);
     }
   }
+
+  return newArr;
 }
 
-console.log(older(data))
+console.log(combine(array1, array2));
