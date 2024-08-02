@@ -417,38 +417,119 @@
 // const result = nums.filter(x => x % 2 === 0 ).map(y => y * 2).reverse()
 // console.log(result)
 
-const players = [
-  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
-  { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
-  { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
-  { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
-  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
-];
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+//   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
+//   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
+//   { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
+//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
+// ];
 
-const sortByTime = (a, b) => a.timePlayed - b.timePlayed;
+// const sortByTime = (a, b) => a.timePlayed - b.timePlayed;
 
-console.log(players.sort(sortByTime));
+// console.log(players.sort(sortByTime));
 
-const sortByPoints = (a, b) => a.points - b.points;
+// const sortByPoints = (a, b) => a.points - b.points;
 
-console.log(players.sort(sortByPoints));
+// console.log(players.sort(sortByPoints));
 
-const cart = [
-  { label: "Apples", price: 100, quantity: 2 },
-  { label: "Bananas", price: 120, quantity: 3 },
-  { label: "Lemons", price: 70, quantity: 4 },
-];
+// const cart = [
+//   { label: "Apples", price: 100, quantity: 2 },
+//   { label: "Bananas", price: 120, quantity: 3 },
+//   { label: "Lemons", price: 70, quantity: 4 },
+// ];
 
-const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
-console.log(totalQuantity);
+// const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+// console.log(totalQuantity);
 
-const arr = [
-  { name: "John", age: 32 },
-  { name: "Jane", age: 26 },
-  { name: "Mike", age: 42 },
-  { name: "Emily", age: 29 },
-];
+// const arr = [
+//   { name: "John", age: 32 },
+//   { name: "Jane", age: 26 },
+//   { name: "Mike", age: 42 },
+//   { name: "Emily", age: 29 },
+// ];
 
-const newArr = arr.map((item) => item.name);
+// const newArr = arr.map((item) => item.name);
 
-console.log(newArr.sort());
+// console.log(newArr.sort());
+
+// class Person  {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName
+//     this.lastName = lastName
+//   }
+
+//   getFullName() {
+//     return this.firstName + " " + this.lastName;
+//   }
+
+// }
+
+// const person1 = new Person('John', 'Doe');
+// console.log(person1.getFullName());
+
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   getArea() {
+//     return this.width * this.height;
+//   }
+// }
+
+// const rectangle1 = new Rectangle(10, 5);
+// console.log(rectangle1.getArea());
+
+// class Calculator {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+
+//   add() {
+//     return this.a + this.b;
+//   }
+
+//   subtract() {
+//     return this.a - this.b;
+//   }
+
+//   multiply() {
+//     return this.a * this.b;
+//   }
+
+//   divide() {
+//     if (this.b === 0) {
+//       return "На нуль ділити не можна";
+//     }
+//     return this.a / this.b;
+//   }
+// }
+
+// const calculator1 = new Calculator(2, 3);
+// console.log(calculator1.add());
+// const calculator2 = new Calculator(5, 2);
+// console.log(calculator2.subtract());
+// const calculator3 = new Calculator(2, 4);
+// console.log(calculator3.multiply());
+// const calculator4 = new Calculator(10, 2);
+// console.log(calculator4.divide());
+// const calculator5 = new Calculator(10, 0);
+// console.log(calculator5.divide());
+
+class Product {
+  constructor(name, price, discount) {
+    this.name = name;
+    this.price = price;
+    this.discount = discount * 0.01;
+  }
+
+  getDiscountPrice() {
+    return this.price - this.discount * this.price;
+  }
+}
+
+const product1 = new Product("Phone", 500, 10);
+console.log(product1.getDiscountPrice());

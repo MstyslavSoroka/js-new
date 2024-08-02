@@ -50,3 +50,20 @@ function hw14() {
 function hw15() {
   window.location.href = "hw15/index.html";
 }
+
+function hw16() {
+  window.location.href = "hw16/index.html";
+}
+
+function hw17() {
+  window.location.href = "hw17/index.html";
+}
+
+function hw18() {
+  window.location.href = "hw18/index.html";
+}
+
+function hw19() {
+  window.location.href = "hw19/index.html";
+}
+
