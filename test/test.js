@@ -1,51 +1,38 @@
-// let siteNav = document.querySelector(".site-nav");
+// const input = document.querySelector(`.js-input`);
+// const button = document.querySelector(`.js-button span`);
 
-// siteNav.style.backgroundColor = "yellow";
-
-// let firstNavLink = document.querySelector(`a[href=""]`);
-
-// firstNavLink.classList.add("site-nav__link")
-
-// let navLink = document.querySelector(`a[href="https://"]`);
-
-// navLink.style.fontSize = "24px"
-
-// const links = document.querySelectorAll('a[href^="http"]');
-// links.forEach((link) => {
-//   link.style.color = "orange";
+// input.addEventListener(`input`, function () {
+//   const name = input.value.trim();
+//   button.textContent = name ? name : "Анонім";
 // });
 
-// let allLinks = document.querySelectorAll('a[href^="http"]');
+// const form = document.querySelector('.js-register-form');
+// form.addEventListener('submit', function (event) {
+//     event.preventDefault();
+//     const formData = new FormData(form);
+//     const email = formData.get('email');
+//     const password = formData.get('password');
+//     const subscription = formData.get('subscription');
+//     console.log(`Емаіл: ${email}`);
+//     console.log(`Пароль: ${password}`);
+//     console.log(`Тип підписки: ${subscription}`);
 
-// allLinks.forEach((link) => {
-//   link.style.color = "orange";
+//     alert('Форма відправлена, перевірте в консолі введені дані!')
+
 // });
 
-// const button = document.createElement("button");
-// button.type = "button";
-// button.textContent = "button";
-// button.style = "color: red";
-// button.style = "border-color: blue";
-
-// const img = document.createElement("img");
-// img.src =
-//   "https://static.vecteezy.com/system/resources/thumbnails/014/440/983/small_2x/image-icon-design-in-blue-circle-png.png";
-// img.alt = "example";
-
-// const body = document.getElementById("body");
-
-// document.body.prepend(img, button);
+// const button = document.querySelector(`.btn`);
+// const heading = document.querySelector(`.title`);
+// button.addEventListener(`click`, function () {
+//   heading.classList.add(`style`);
+// });
 
 
+const input = document.querySelector(`.inputText`)
+const result = document.querySelector(`.result`)
 
-
-
-
-// const li = document.createElement("li")
-// li.textContent = "hello";
-
-
-// const list = document.getElementById("list")
-
-// list.append(li)
+input.addEventListener(`input`, function(){
+    const text = input.value.trim()
+    result.textContent = text
+})
 
