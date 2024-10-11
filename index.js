@@ -67,3 +67,26 @@ function hw19() {
   window.location.href = "hw19/index.html";
 }
 
+function hw20() {
+  window.location.href = "hw20/index.html";
+}
+
+function hw21() {
+  window.location.href = "hw21/index.html";
+}
+
+function hw22() {
+  window.location.href = "hw22/index.html";
+}
+function hw23() {
+  window.location.href = "hw23/index.html";
+}
+function hw24() {
+  window.location.href = "hw24/index.html";
+}
+function hw25() {
+  window.location.href = "hw25/index.html";
+}
+
+
+
