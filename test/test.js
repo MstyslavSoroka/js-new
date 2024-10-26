@@ -146,16 +146,52 @@
 
 // palette.addEventListener("click", selectColor);
 
+// const nav = document.querySelector('.js-nav');
 
-const nav = document.querySelector('.js-nav');
+// nav.addEventListener('click', (event) => {
 
-nav.addEventListener('click', (event) => {
+//     if (event.target.tagName === 'A') {
 
-    if (event.target.tagName === 'A') {
+//         const activeButtons = nav.querySelectorAll('.btn.active');
+//         activeButtons.forEach(btn => btn.classList.remove('active'));
 
-        const activeButtons = nav.querySelectorAll('.btn.active');
-        activeButtons.forEach(btn => btn.classList.remove('active'));
+//         event.target.classList.add('active');
+//     }
+// });
 
-        event.target.classList.add('active');
-    }
-});
+// const boxes = document.querySelectorAll(".box");
+
+// const option = {
+//   threshold: [0.6],
+// };
+
+// const onEntry = (entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.intersectionRatio > 0.6) {
+//       entry.target.classList.add("active");
+//     } else {
+//       entry.target.classList.remove("active");
+//     }
+//   });
+// };
+
+// const observer = new IntersectionObserver(onEntry, option);
+
+// boxes.forEach((box) => observer.observe(box));
+
+// document.addEventListener('scroll', function () {
+//   const items = document.querySelectorAll('.fruits-list li');
+  
+//   items.forEach(item => {
+//       const rect = item.getBoundingClientRect();
+//       const inView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      
+//       if (inView) {
+//           item.classList.add('in-view');
+//       } else {
+//           item.classList.remove('in-view');
+//       }
+//   });
+// });
+
+console.log(5+5)

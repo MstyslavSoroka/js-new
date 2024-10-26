@@ -98,8 +98,6 @@ const galleryItems = [
     modalImage.alt = alt;
   }
   
-  closeButton.addEventListener('click', closeModal);
-  
   modalOverlay.addEventListener('click', closeModal);
   
   function closeModal() {

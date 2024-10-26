@@ -84,7 +84,7 @@ body, html {
     transform: scale(1.1);
 } */
 
-body {
+/* body {
     font-family: Roboto, sans-serif;
   }
   
@@ -140,4 +140,44 @@ body {
   .active {
     color: #fff;
     background-color: #2196f3;
+  } */
+
+
+  /* .box {
+    width: 400px;
+    height: 400px;
+    border: 1px solid red;
+    transition: ease-in 0.3s;
   }
+
+  .active {
+    background-color: blue;
+  } */
+
+  body {
+    font-family: Arial, sans-serif;
+}
+
+.fruits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fruits-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.fruits-list li img {
+    width: 400px;
+    height: 400px;
+    margin-right: 10px;
+}
+
+.fruits-list li.in-view {
+    background-color: #ffeb3b; 
+}

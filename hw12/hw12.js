@@ -97,27 +97,25 @@ console.log(getPropValues(products, "name"));
 // =============================================================5=======================================================
 
 function calculateTotalPrice(allProducts, productName) {
-    let totalPrice = 0;
-    
-    for (const product of allProducts) {
-        if (product.name === productName) {
-            totalPrice = product.price * product.quantity;
-            break;
-        }
+  let totalPrice = 0;
+
+  for (const product of allProducts) {
+    if (product.name === productName) {
+      totalPrice = product.price * product.quantity;
+      break;
     }
-    
-    return totalPrice;
+  }
+
+  return totalPrice;
 }
 
 const productsList = [
-    { name: 'Radar', price: 1300, quantity: 4 },
-    { name: 'Scanner', price: 2700, quantity: 3 },
-    { name: 'dron', price: 400, quantity: 7 },
-    { name: 'laptop', price: 1200, quantity: 9 }
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "dron", price: 400, quantity: 7 },
+  { name: "laptop", price: 1200, quantity: 9 },
 ];
-console.log(calculateTotalPrice(productsList, 'Radar')); 
-console.log(calculateTotalPrice(productsList, 'dron')); 
-
+console.log(calculateTotalPrice(productsList, "Radar"));
+console.log(calculateTotalPrice(productsList, "dron"));
 
 // =============================================================6=======================================================
-
