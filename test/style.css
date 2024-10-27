@@ -154,30 +154,33 @@ body, html {
     background-color: blue;
   } */
 
-  body {
-    font-family: Arial, sans-serif;
-}
 
-.fruits-list {
+.lazy-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.fruits-list li {
+.lazy-list li {
     display: flex;
     align-items: center;
     margin: 10px 0;
     padding: 10px;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.fruits-list li img {
+.lazy-list li img {
     width: 400px;
     height: 400px;
     margin-right: 10px;
 }
 
-.fruits-list li.in-view {
-    background-color: #ffeb3b; 
-}
+.lazy-list li {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+  
+  .lazy-list li.in-view {
+    opacity: 1;
+    
+  }
+

@@ -179,19 +179,25 @@
 
 // boxes.forEach((box) => observer.observe(box));
 
-// document.addEventListener('scroll', function () {
-//   const items = document.querySelectorAll('.fruits-list li');
-  
-//   items.forEach(item => {
-//       const rect = item.getBoundingClientRect();
-//       const inView = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      
-//       if (inView) {
-//           item.classList.add('in-view');
-//       } else {
-//           item.classList.remove('in-view');
-//       }
-//   });
-// });
+const items = document.querySelectorAll(".lazy-list li");
 
-console.log(5+5)
+const options = {
+  threshold: [0.5],
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+    } else {
+      entry.target.classList.remove("in-view");
+    }
+  });
+}, options);
+
+items.forEach((item) => {
+  observer.observe(item);
+});
+
+
+
