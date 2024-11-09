@@ -179,25 +179,117 @@
 
 // boxes.forEach((box) => observer.observe(box));
 
-const items = document.querySelectorAll(".lazy-list li");
+// const items = document.querySelectorAll(".lazy-list li");
 
-const options = {
-  threshold: [0.5],
+// const options = {
+//   threshold: [0.5],
+// };
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("in-view");
+//     } else {
+//       entry.target.classList.remove("in-view");
+//     }
+//   });
+// }, options);
+
+// items.forEach((item) => {
+//   observer.observe(item);
+// });
+
+// const data = {
+//   labels: [
+//     "8.00",
+//     "9.00",
+//     "10.00",
+//     "11.00",
+//     "12.00",
+//     "13.00",
+//     "14.00",
+//     "15.00",
+//     "16.00",
+//     "17.00",
+//     "18.00",
+//     "19.00",
+//     "20.00",
+//     "21.00",
+//     "22.00",
+//   ],
+//   datasets: [
+//     {
+//       label: "Продажі за останній тиждень",
+//       data: [11, 12, 9, 11, 19, 21, 25, 23, 24, 23, 18, 15, 11, 9, 8],
+//       borderColor: "#141414",
+//       borderWidth: 1,
+//     },
+//   ],
+// };
+
+// const config = {
+//   type: "line",
+//   data: data,
+//   options: {
+//     animations: {
+//       tension: {
+//          duration: 750,
+//          easing: 'easing',
+//          from: 1,
+//          to: 0,
+//          loop: false
+//       }
+//    },
+//     scales: {
+//       x: {
+//         display: true,
+//         title: {
+//           display: true,
+//           text: "Час",
+//         },
+//       },
+//       y: {
+//         display: true,
+//         title: {
+//           display: true,
+//           text: "Продажі",
+//         },
+//       },
+//     },
+//   },
+// };
+const data = {
+  labels: ["January", "February", "March", "April"],
+  datasets: [
+    {
+      label: "Продажі",
+      data: [120, 150, 170, 200],
+      borderWidth: 1,
+    },
+    {
+      label: "Прибуток",
+      data: [1500, 1700, 2000, 2200],
+      type: "line",
+      borderColor: "red",
+      borderWidth: 2,
+      yAxisID: "y1",
+    },
+  ],
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in-view");
-    } else {
-      entry.target.classList.remove("in-view");
-    }
-  });
-}, options);
+const config = {
+  type: "bar",
+  data: data,
+  options: {
+    responsive: true,
+    scales: {
+      y: {},
+      y1: {
+        beginAtZero: true,
+        position: "right",
+      },
+    },
+  },
+};
 
-items.forEach((item) => {
-  observer.observe(item);
-});
-
-
-
+const chart = new Chart(document.getElementById("chart"), config);
