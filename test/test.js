@@ -258,38 +258,43 @@
 //     },
 //   },
 // };
+// 
 const data = {
-  labels: ["January", "February", "March", "April"],
-  datasets: [
-    {
-      label: "Продажі",
-      data: [120, 150, 170, 200],
-      borderWidth: 1,
-    },
-    {
-      label: "Прибуток",
-      data: [1500, 1700, 2000, 2200],
-      type: "line",
-      borderColor: "red",
-      borderWidth: 2,
-      yAxisID: "y1",
-    },
-  ],
+  labels: ["Компанія A", "Компанія B", "Компанія C", "Компанія D", "Компанія E"],
+  datasets: [{
+      label: "Частки ринку",
+      data: [11, 12, 9, 14, 1],
+      backgroundColor: ["#ffb3ba", "#ffdfba", "#ffffba", "#baffc9", "#bae1ff"],
+      borderWidth: 1
+  }]
 };
 
 const config = {
-  type: "bar",
+  type: "pie",  
   data: data,
   options: {
-    responsive: true,
-    scales: {
-      y: {},
-      y1: {
-        beginAtZero: true,
-        position: "right",
+      responsive: true,
+      plugins: {
+          legend: {
+              position: "top",  
+              labels: {
+                  boxWidth: 20
+              }
+          },
       },
-    },
-  },
+      animation: {
+          animateScale: true,  
+          animateRotate: true  
+      },
+      onClick: function(e, elements) {
+        if (elements.length > 0) {
+          const firstElement = elements[0];
+          const label = chart.data.labels[firstElement.index];
+          const value = chart.data.datasets[firstElement.datasetIndex].data[firstElement.index];
+          alert(`Компанія ${label},\nчастина ринку ${value}.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus odio eros, luctus nec dignissim placerat, fringilla ut massa. Aenean gravida.`);
+        }
+      }
+  }
 };
 
 const chart = new Chart(document.getElementById("chart"), config);

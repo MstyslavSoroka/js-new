@@ -155,7 +155,7 @@ body, html {
   } */
 
 
-.lazy-list {
+/* .lazy-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -183,4 +183,26 @@ body, html {
     opacity: 1;
     
   }
+ */
 
+.basicLightbox {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.basicLightbox--visible {
+  opacity: 1;
+}
+
+.basicLightbox__overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
