@@ -1,0 +1,42 @@
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff4757;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.close {
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+#feedbackForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
