@@ -9,5 +9,3 @@ export function setData(name, email, pass) {
   data.email = email;
   data.pass = pass;
 }
-
-
